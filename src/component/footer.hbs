@@ -1,0 +1,28 @@
+<br>
+<hr>
+{{#with footer}}
+<footer>
+    <div>
+        {{#with social}}
+
+        {{> link href=email.href text=email.text external=true }}
+        {{> link href=phone.href text=phone.text external=true }}
+        {{> link href=linkedin.href text=linkedin.text external=true noLine=true }}
+
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        {{#with ../header.name}}
+        <em>© Copyright by {{firstname }} {{lastname}}</em>
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <address>{{../header.address}}</address>
+    </div>
+    <div>
+        <time>est. 2023</time>
+    </div>
+</footer>
+{{/with}}
