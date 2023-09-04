@@ -286,7 +286,6 @@ router.get('/person', function (req, res) {
     page: {
       title: 'Resume | Person',
     },
-    header,
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -378,7 +377,6 @@ router.get('/person', function (req, res) {
         },
       ],
     },
-    footer,
   })
 })
 
