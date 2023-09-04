@@ -189,5 +189,93 @@ router.get('/education', function (req, res) {
 
 // ================================================================
 
+router.get('/work', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('work', {
+    layout: 'big',
+    page: {
+      title: 'Resume | Work',
+    },
+    header,
+    main: {
+      works: [
+        {
+          position: 'Senior Pharmacist',
+          company: {
+            name: 'Sumatra LTD',
+            url: null,
+          },
+
+          duration: {
+            from: '01.02.2010',
+            to: '31.05.2013',
+          },
+          projectAmount: 16,
+          projects: [
+            {
+              name: 'Project name',
+              url: 'i.ua',
+              about: 'About this project',
+              stackAmount: 3,
+              stacks: [
+                { name: 'React.js' },
+                { name: 'HTML/CSS' },
+                { name: 'Node.js' },
+              ],
+              awardAmount: 2,
+              awards: [
+                {
+                  name: 'Gold Cucamber',
+                },
+                {
+                  name: 'Green Tomato',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          position: 'Senior Pharmacist',
+          company: {
+            name: 'Aptekar+Vitalux',
+            url: 'http://aptekar.ua',
+          },
+
+          duration: {
+            from: '01.06.2013',
+            to: null,
+          },
+          projectAmount: 9,
+          projects: [
+            {
+              name: 'Project name',
+              url: 'google.com',
+              about: 'About this project',
+              stackAmount: 3,
+              stacks: [
+                { name: 'React.js' },
+                { name: 'HTML/CSS' },
+                { name: 'Node.js' },
+              ],
+              awardAmount: 2,
+              awards: [
+                {
+                  name: 'Grey Potato',
+                },
+                {
+                  name: 'Yellow Apple',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    footer,
+  })
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
