@@ -1,0 +1,259 @@
+<div>
+    <main>
+        <section>
+            <div>
+                {{> title data=name big=true}}
+                <hr>
+                <br>
+                <div><b>Birth date: </b><strong>{{birthdate}}</strong></div>
+                <div><b>Birth place:</b>
+                    <em>{{birthplace}}</em>
+                </div>
+                <br>
+                <div><b>Death date: </b><strong>{{deathdate}}</strong></div>
+                <div><b>Death place:</b>
+                    <em>{{deathplace}}</em>
+                </div>
+                <br>
+                <div><b>Nationality: </b><strong>{{nationality}}</strong></div>
+                <div><b>Occupation:</b>
+                    <em>{{occupation}}</em>
+                </div>
+                <br>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Known for:</strong>
+                    </summary>
+                    {{#each known_for }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>{{this}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Education:</strong>
+                    </summary>
+                    {{#each education }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>Degree: </b>
+                                <strong>{{degree}}</strong>
+                            </div>
+                            <div>
+                                <b>Field: </b>
+                                <em>{{field}}</em>
+                            </div>
+                            <div>
+                                <b>Institution: </b>
+                                {{institution}}
+                            </div>
+                            <div>
+                                <b>Year: </b>
+                                <b>{{year}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Notable publications:</strong>
+                    </summary>
+                    {{#each notable_publications }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>Title: </b>
+                                <strong>{{title}}</strong>
+                            </div>
+                            <div>
+                                <b>Year: </b>
+                                <b>{{year}}</b>
+                            </div>
+                            <div>
+                                <b>Publisher: </b>
+                                <em>{{publisher}}</em>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Partners:</strong>
+                    </summary>
+                    {{#each partners }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>Name: </b>
+                                <strong>{{name}}</strong>
+                            </div>
+                            <div>
+                                <b>Relationship: </b>
+                                <em>{{relationship}}</em>
+                            </div>
+                            <div>
+                                <b>Years: </b>
+                                <b>{{years}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Awards:</strong>
+                    </summary>
+                    {{#each awards }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>Title: </b>
+                                <strong>{{title}}</strong>
+                            </div>
+                            <div>
+                                <b>Year: </b>
+                                <b>{{year}}</b>
+                            </div>
+                            <div>
+                                <b>Description: </b>
+                                <em>{{description}}</em>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Influences:</strong>
+                    </summary>
+                    {{#each influences }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>{{this}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Influenced:</strong>
+                    </summary>
+                    {{#each influenced }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>{{this}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Quotes:</strong>
+                    </summary>
+                    {{#each quotes }}
+                    <ul>
+                        <li>
+                            <div>
+                                <q>{{this}}</q>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Major discoveries:</strong>
+                    </summary>
+                    {{#each major_discoveries }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>Title: </b>
+                                <strong>{{title}}</strong>
+                            </div>
+                            <div>
+                                <b>Year: </b>
+                                <b>{{year}}</b>
+                            </div>
+                            <div>
+                                <b>Description: </b>
+                                <em>{{description}}</em>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        <strong>Contributions:</strong>
+                    </summary>
+                    {{#with contributions }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>Title: </b>
+                                <strong>{{title}}</strong>
+                            </div>
+                            <div>
+                                <b>Description: </b>
+                                <em>{{description}}</em>
+                            </div>
+                            <div>
+                                <b>Year: </b>
+                                <b>{{year}}</b>
+                            </div>
+                            <div>
+                                <b>Field: </b>
+                                <b>{{field}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </details>
+                <hr>
+            </div>
+        </section>
+    </main>
+</div>
