@@ -25,6 +25,23 @@
             <div>
                 <details>
                     <summary>
+                        <strong>Known for:</strong>
+                    </summary>
+                    {{#each known_for }}
+                    <ul>
+                        <li>
+                            <div>
+                                <b>{{this}}</b>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+                <hr>
+            </div>
+            <div>
+                <details>
+                    <summary>
                         <strong>Education:</strong>
                     </summary>
                     {{#each education }}
