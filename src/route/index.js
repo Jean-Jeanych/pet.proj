@@ -282,7 +282,7 @@ router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     // ↙ сюди вводимо JSON дані
-    layout: 'person',
+    layout: 'basic',
     page: {
       title: 'Person',
     },
@@ -386,7 +386,7 @@ router.get('/person', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    layout: 'bio',
+    layout: 'basic',
     page: {
       title: 'Bio',
     },
@@ -486,7 +486,7 @@ router.get('/bio', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'program',
+    layout: 'basic',
     page: {
       title: 'Program',
     },
@@ -575,6 +575,10 @@ router.get('/program', function (req, res) {
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
+    layout: 'basic',
+    page: {
+      title: 'Web',
+    },
     web: {
       languages: [
         {
