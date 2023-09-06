@@ -16,92 +16,106 @@
                         <p>{{description}}</p>
                     </div>
                     {{#if elements}}
-                    <div><b>Elements: </b></div>
-                    <br>
                     <div>
-                        <ul>
-                            {{#each elements}}
-                            <li>
-                                <div><strong>{{name}}</strong> - "{{description}}"</div>
-                                <br>
-                                <div><b>Attributes: </b></div>
-                                <br>
-                                <div>
-                                    <ul>
-                                        {{#each attributes}}
-                                        <li>
-                                            <div><em>{{name}}</em> - "{{description}}"</div>
-                                            <br>
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                    <hr>
-                                </div>
-                            </li>
-                            {{/each}}
-                        </ul>
+                        <details>
+                            <summary><b>Elements: </b></summary>
+                            <br>
+                            <div>
+                                <ul>
+                                    {{#each elements}}
+                                    <li>
+                                        <div><strong>{{name}}</strong> - "{{description}}"</div>
+                                        <br>
+                                        <div><b>Attributes: </b></div>
+                                        <br>
+                                        <div>
+                                            <ul>
+                                                {{#each attributes}}
+                                                <li>
+                                                    <div><em>{{name}}</em> - "{{description}}"</div>
+                                                    <br>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <hr>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </details>
+                        <br>
                     </div>
                     {{/if}}
                     {{#if properties}}
-                    <div><b>Properties: </b></div>
-                    <br>
                     <div>
-                        <ul>
-                            {{#each properties}}
-                            <li>
-                                <div><strong>{{name}}</strong> - "{{description}}"</div>
-                                <br>
-                                <div><b>Values: </b></div>
-                                <br>
-                                <div>
-                                    <ul>
-                                        {{#each values}}
-                                        <li>
-                                            <div><em>{{value}}</em> - "{{description}}"</div>
-                                            <br>
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                    <hr>
-                                </div>
-                            </li>
-                            {{/each}}
-                        </ul>
+                        <details>
+                            <summary><b>Properties: </b></summary>
+                            <br>
+                            <div>
+                                <ul>
+                                    {{#each properties}}
+                                    <li>
+                                        <div><strong>{{name}}</strong> - "{{description}}"</div>
+                                        <br>
+                                        <div><b>Values: </b></div>
+                                        <br>
+                                        <div>
+                                            <ul>
+                                                {{#each values}}
+                                                <li>
+                                                    <div><em>{{value}}</em> - "{{description}}"</div>
+                                                    <br>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <hr>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </details>
+                        <br>
                     </div>
                     {{/if}}
                     {{#if functions}}
-                    <div><b>Functions: </b></div>
-                    <br>
                     <div>
-                        <ul>
-                            {{#each functions}}
-                            <li>
-                                <div><strong>{{name}}</strong> - "{{description}}"</div>
-                                <br>
-                                <div><b>Parameters: </b></div>
-                                <br>
-                                <div>
-                                    <ul>
-                                        {{#each parameters}}
-                                        <li>
-                                            <div><em>{{name}}</em> ({{type}}) - "{{description}}"</div>
-                                            <br>
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                    <hr>
-                                </div>
-                            </li>
-                            {{/each}}
-                        </ul>
+                        <details>
+                            <summary><b>Functions: </b></summary>
+                            <br>
+                            <div>
+                                <ul>
+                                    {{#each functions}}
+                                    <li>
+                                        <div><strong>{{name}}</strong> - "{{description}}"</div>
+                                        <br>
+                                        <div><b>Parameters: </b></div>
+                                        <br>
+                                        <div>
+                                            <ul>
+                                                {{#each parameters}}
+                                                <li>
+                                                    <div><em>{{name}}</em> ({{type}}) - "{{description}}"</div>
+                                                    <br>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <hr>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </details>
+                        <br>
                     </div>
                     {{/if}}
                 </li>
                 {{/each}}
             </ol>
         </div>
-        <br>
-        <br>
+
         <hr>
         <hr>
         {{/with}}
