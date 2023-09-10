@@ -1,0 +1,213 @@
+<div>
+    <main>
+        <section>
+            <h1>{{name}}</h1>
+            <div>
+                Description: <em>{{description}}</em>
+            </div>
+            <div>Price: <b>{{price}}</b></div>
+            <div>Category: <b>{{category}}</b></div>
+            <div>
+                <span class="badge rounded-pill text-bg-primary">Features:</span>
+
+                {{#with features}}
+                <ul>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Processor:</span>
+                            {{#with processor}}
+                            <ul>
+                                <li>
+                                    <div>Brand: <b>{{brand}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Model: <b>{{model}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Speed: <b>{{speed}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Cores: <b>{{cores}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Cache: <b>{{cache}}</b></div>
+                                </li>
+                            </ul>
+                            {{/with}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Memory:</span>
+                            {{#with memory}}
+                            <ul>
+                                <li>
+                                    <div>Type: <b>{{type}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Size: <b>{{size}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Speed: <b>{{speed}}</b></div>
+                                </li>
+                            </ul>
+                            {{/with}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Storage:</span>
+                            {{#with storage}}
+                            <ul>
+                                <li>
+                                    <div>Type: <b>{{type}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Size: <b>{{size}}</b></div>
+                                </li>
+                            </ul>
+                            {{/with}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Display:</span>
+                            {{#with display}}
+                            <ul>
+                                <li>
+                                    <div>Size: <b>{{size}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Resolution: <b>{{resolution}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Technology: <b>{{technology}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Color_space: <b>{{color_space}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Brightness: <b>{{brightness}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Refresh_rate: <b>{{refresh_rate}}</b></div>
+                                </li>
+                            </ul>
+                            {{/with}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Graphics:</span>
+                            {{#with graphics}}
+                            <ul>
+                                <li>
+                                    <div>Brand: <b>{{brand}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Model: <b>{{model}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Memory: <b>{{memory}}</b></div>
+                                </li>
+                            </ul>
+                            {{/with}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Ports:</span>
+                            {{#each ports}}
+                            <ul>
+                                <li>
+                                    <div>Type: <b>{{type}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Count: <b>{{count}}</b></div>
+                                </li>
+                                {{#if features}}
+                                <li>
+                                    <div>
+                                        <span class="badge rounded-pill text-bg-success">Features:</span>
+                                        {{#each features}}
+                                        <ul>
+                                            <li><b>{{this}}</b></li>
+                                        </ul>
+                                        {{/each}}
+                                    </div>
+                                </li>
+                                {{/if}}
+                            </ul>
+                            {{/each}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Battery:</span>
+                            {{#with battery}}
+                            <ul>
+                                <li>
+                                    <div>Type: <b>{{type}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Capacity: <b>{{capacity}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Life: <b>{{life}}</b></div>
+                                </li>
+                            </ul>
+                            {{/with}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Weight:</span>
+                            <b>{{weight}}</b>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Dimensions:</span>
+                            {{#with dimensions}}
+                            <ul>
+                                <li>
+                                    <div>Height: <b>{{height}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Width: <b>{{width}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Depth: <b>{{depth}}</b></div>
+                                </li>
+                            </ul>
+                            {{/with}}
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Operating system:</span>
+                            <b>{{operating_system}}</b>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="badge rounded-pill text-bg-info">Accessories:</span>
+                            {{#each accessories}}
+                            <ul>
+                                <br>
+                                <li>
+                                    <div>Name: <b>{{name}}</b></div>
+                                </li>
+                                <li>
+                                    <div>Price: <b>{{price}}</b></div>
+                                </li>
+                            </ul>
+                            {{/each}}
+                        </div>
+                    </li>
+                </ul>
+                {{/with}}
+            </div>
+        </section>
+    </main>
+</div>
