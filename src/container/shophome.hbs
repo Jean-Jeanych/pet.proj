@@ -1,10 +1,85 @@
-<main>
+<main class="mx-1">
     <header>
-        <nav>
+        <div class="card mt-3 mb-5">
+            {{#with navigation}}
+            <div class="nav">
+                {{#each links}}
+                <div class="nav-item">
+                    <a href={{href}} class="nav-link">{{text}}</a>
+                </div>
+                {{/each}}
+                <div class="link-item">
+                    <a href="#" class="nav-link disabled">Disabled</a>
+                </div>
+            </div>
+            {{/with}}
+        </div>
 
-        </nav>
+        {{#with newsBlock}}
+
+        <h1 class="mt-5 text-center mx-5">{{title}}</h1>
+
+        <div class="row g-2 mt-4">
+            {{#each cards}}
+            <div class="col-3">
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        <div>{{title}}
+                            {{#if isTop}}
+                            <div class="badge text-bg-success rounded-pill text-capitalize">new</div>
+                            {{/if}}
+                            {{#if isNew}}
+                            <div class="badge text-bg-danger rounded-pill text-capitalize">top</div>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        {{/with}}
+
+        <hr class="my-5">
+
     </header>
+
     <section>
-        <div>Page in progress...</div>
+        {{#with goodsBlock}}
+        <div class=" nav nav-tabs mb-5">
+            {{#each tabs}}
+            <div class="nav-item">
+                {{#if isActive}}
+                <a href="#" class="nav-link active">{{text}}</a>
+                {{else}}
+                {{#if isDisabled}}
+                <a href="#" class="nav-link disabled">{{text}}</a>
+                {{else}}
+                <a href="#" class="nav-link">{{text}}</a>
+                {{/if}}
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+
+
+        <div class="row gx-2 gy-4">
+            {{#each cards}}
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src={{image}} alt={{title}}>
+                    <div class="card-body">
+                        <div class="card-title">{{title}}</div>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <br>
+        <br>
+        <br>
+        {{/with}}
     </section>
 </main>
