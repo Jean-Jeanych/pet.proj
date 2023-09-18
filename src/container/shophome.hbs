@@ -175,10 +175,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href={{link}}>{{text}}</a>
                     </li>
-                    {{/each}}
+                    {{#if @last}}
                     <li class="nav-item">
                         <a class="nav-link disabled" href='#'>Disabled</a>
                     </li>
+                    {{/if}}
+                    {{/each}}
                 </ul>
             </div>
     </footer>
