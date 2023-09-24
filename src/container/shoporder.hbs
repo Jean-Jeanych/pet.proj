@@ -69,9 +69,41 @@
                     {{/if}}
                     {{/each}}
                 </div>
+                {{/with}}
+                {{/with}}
+                <hr class="my-4">
+
+                {{#with delivery}}
+                <h3 class="my-4">{{title}}</h3>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            {{#each select}}
+                            <div class="col-6">
+                                <label class="form-label">{{label}}</label>
+                                <select class="form-select" placeholder="{{placeholder}}">
+                                    {{#each options}}
+                                    <option value="{{value}}">{{text}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-4">
+                    {{#each delivery_type}}
+                    <div class="form-check">
+                        <label class="form-check-label">{{type}}</label>
+                        <input name="delivery_type" type="radio" class="form-check-input">
+                    </div>
+                    {{/each}}
+                </div>
 
                 <hr class="my-4">
-                {{/with}}
+
                 {{/with}}
             </div>
 
