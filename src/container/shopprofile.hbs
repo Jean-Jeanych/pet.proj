@@ -1,0 +1,45 @@
+<main class="mx-4">
+    <header>
+        <h1>{{header}}</h1>
+    </header>
+
+    <section class="mt-4">
+        {{#with purchase}}
+        <div class=" nav nav-tabs mb-5">
+            {{#each tabs}}
+            <div class="nav-item">
+                {{#if @first}}
+                <a href="#" class="nav-link active"><b>{{this}}</b></a>
+                {{else}}
+                <a href="#" class="nav-link">{{this}}</a>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+
+
+        {{#with actionBlock}}
+        <div class="row">
+            <div class="col-4">
+                <input class="form-control" placeholder="{{input.placeholder}}">
+            </div>
+            {{#each buttons}}
+            {{#if isSuccess}}
+            <a href="{{link}}" class="btn btn-success">{{text}}</a>
+            {{/if}}
+            {{#if isOutline}}
+            <a href="{{link}}" class="btn btn-outline-success">{{text}}</a>
+            {{/if}}
+            {{#if isDanger}}
+            <a href="{{link}}" class="btn btn-outline-danger">{{text}}</a>
+            {{/if}}
+            {{/each}}
+        </div>
+        {{/with}}
+
+        item list
+
+        {{/with}}
+    </section>
+
+</main>
