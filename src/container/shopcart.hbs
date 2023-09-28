@@ -1,0 +1,88 @@
+<main class="mx-4">
+    <header>
+        {{#with header}}
+        <h1 class="mt-5">{{title}}</h1>
+        <a href="{{button.link}}" class="btn btn-outline-secondary btn-lg mt-2 mb-5">{{button.text}}</a>
+        {{/with}}
+
+        {{> sep}}
+
+    </header>
+
+    <section class="mt-5">
+        <div class="row">
+            {{#each goodsBlock}}
+            {{> cartGoodsItem}}
+            {{/each}}
+        </div>
+
+        <div class="my-5">
+            {{>sep}}
+        </div>
+
+        {{#with total}}
+
+        <h4>{{title}}</h4>
+        <h2>{{amount}}</h2>
+        <div class="mb-3">{{delivery}}</div>
+        {{#each buttons}}
+        {{#if isSuccess}}
+        <div><a href="{{link}}" class="btn btn-success mb-3">{{text}}</a></div>
+        {{/if}}
+        {{#if isOutline}}
+        <div><a href="{{link}}" class="btn btn-outline-success">{{text}}</a></div>
+        {{/if}}
+        {{/each}}
+        {{/with}}
+
+        <div class="my-5">
+            {{>sep}}
+        </div>
+
+        {{#with goodsOtherBlock}}
+        <h3 class="text-center">{{title}}</h3>
+
+        <div class="row g-2">
+            {{#each cards}}
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src={{image}} alt={{title}}>
+                    <div class="card-body">
+                        <div class="card-title">{{title}}
+                            {{#if isHot}}
+                            <div class="badge text-bg-warning rounded-pill text-uppercase">hot!</div>
+                            {{/if}}
+                            {{#if idNew}}
+                            <div class="badge text-bg-primary rounded-pill text-capitalize">new</div>
+                            {{/if}}
+                        </div>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+
+        <div class="my-5">
+            {{>sep}}
+        </div>
+
+        {{#with subscribe}}
+        <div class="alert text-bg-dark ps-1 pb-0">
+            <h2>{{header}}</h2>
+            <p class="my-3">{{description}}</p>
+            {{#each buttons}}
+            <div class="my-2">
+                <a class="btn btn-primary" href={{link}}>{{text}}</a>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+
+        <div class="mt-5 mb-1">
+            {{>sep}}
+        </div>
+    </section>
+
+</main>
