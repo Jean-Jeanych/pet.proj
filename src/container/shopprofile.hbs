@@ -5,7 +5,7 @@
 
     <section class="mt-4">
         {{#with purchase}}
-        <div class=" nav nav-tabs mb-5">
+        <div class=" nav nav-tabs mb-4">
             {{#each tabs}}
             <div class="nav-item">
                 {{#if @first}}
@@ -25,19 +25,70 @@
             </div>
             {{#each buttons}}
             {{#if isSuccess}}
-            <a href="{{link}}" class="btn btn-success">{{text}}</a>
+            <div class="col-2 ms-0 pe-0">
+                <a href="{{link}}" class="btn btn-success">{{text}}</a>
+            </div>
             {{/if}}
             {{#if isOutline}}
-            <a href="{{link}}" class="btn btn-outline-success">{{text}}</a>
+            <div class="col-3 ms-0">
+                <a href="{{link}}" class="btn btn-outline-success">{{text}}</a>
+            </div>
             {{/if}}
             {{#if isDanger}}
-            <a href="{{link}}" class="btn btn-outline-danger">{{text}}</a>
+            <div class="col-3 ms-0">
+                <a href="{{link}}" class="btn btn-outline-danger">{{text}}</a>
+            </div>
             {{/if}}
             {{/each}}
         </div>
         {{/with}}
 
-        item list
+        <div class="my-4">{{> sep}}</div>
+
+        {{#each itemList}}
+
+        {{> purchaseItem}}
+
+        {{/each}}
+
+        {{/with}}
+
+        <div class="my-5">{{> sep}}</div>
+
+        {{#with userInfo}}
+
+        <h2 class="my-5">{{title}}</h2>
+
+        {{#with profileData}}
+
+        <div class="card">
+            <div class="card-body">
+                <h3>{{title}}</h3>
+            </div>
+        </div>
+
+        {{/with}}
+
+        {{#with recipients}}
+
+        <div class="card">
+            <div class="card-body">
+                <h3>{{title}}</h3>
+            </div>
+        </div>
+
+        {{/with}}
+
+        {{#with contacts}}
+
+        <div class="card">
+            <div class="card-body">
+                <h3>{{title}}</h3>
+            </div>
+        </div>
+
+        {{/with}}
+
 
         {{/with}}
     </section>
