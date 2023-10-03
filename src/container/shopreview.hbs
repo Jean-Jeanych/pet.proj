@@ -115,68 +115,15 @@
     <section>
         {{#each reviewList}}
 
-        <div class="card">
-            <div class="card-body">
-                <div class="card">
-                    {{#with title}}
-                    <div class="card-header">
-                        <h6>{{userName}}</h6>
-                        <p>{{caption}}</p>
-                        <data>{{date}}</data>
-                    </div>
-                    {{/with}}
-                    {{#with reviewBody}}
-                    <div class="card-body">
-                        {{#with seller}}
-                        <div>
-                            {{title}}: {{value}}
-                        </div>
-                        {{/with}}
-                        {{#with rating}}
-                        <div>
-                            {{title}}: {{value}}
-                        </div>
-                        {{/with}}
-                        {{#each text}}
-                        <p>{{this}}</p>
-                        {{/each}}
-                        {{#with advantages}}
-                        <div>
-                            <strong>{{title}}</strong>: {{text}}
-                        </div>
-                        {{/with}}
-                        {{#with disadvantages}}
-                        <div>
-                            <strong>{{title}}</strong>: {{text}}
-                        </div>
-                        {{/with}}
-                        <div class="row">
-                            {{#each images}}
-                            <div class="col-1">
-                                <img src="{{this}}">
-                            </div>
-                            {{/each}}
-                        </div>
-                    </div>
-                </div>
-
-                {{#each coments}}
-                <div class="card">
-                    <div class="card-body">
-                        <h6>{{userName}}</h6>
-                        <data>{{date}}</data>
-                        <p>{{text}}</p>
-                    </div>
-                </div>
-                {{/each}}
-
-                {{/with}}
-            </div>
-        </div>
+        {{> reviewItem}}
 
         {{/each}}
     </section>
+    <div class="my-5">
+        {{> service}}
+    </div>
 
-    {{> service}}
-
+    <div class="mt-5 mb-1">
+        {{> sep}}
+    </div>
 </main>
