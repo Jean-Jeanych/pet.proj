@@ -1,0 +1,9 @@
+{{#with service}}
+<div class="alert text-center text-bg-success pb-2">
+    <h2>{{title}}</h2>
+    <p class="my-3">{{description}}</p>
+    {{#each buttons}}
+    <a class="btn btn-primary" href={{link}}>{{text}}</a>
+    {{/each}}
+</div>
+{{/with}}
