@@ -2,12 +2,96 @@
 Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
 --}}
+<header>
+    <div class="row my-5">
+        <div class="col-6">
+            {{#with header.name}}
+            <strong>{{firstname}} {{lastname}}</strong>
+            {{/with}}
+        </div>
+        <div class="col-6 text-end"><b>Resume project</b></div>
+    </div>
+</header>
+<section>
+    <h4>Список сторінок</h4>
+    <p>В дальнейшем здесь будет информация про проэкт</p>
 
-<div class="p-5">
-    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-    <button type="button" class="btn btn-primary">Купити</button>
-</div>
+    <div class="row">
+        <div class="col-3">
+            <div class="nav flex-column">
+                <div class="nav-item mb-2">
+                    <a href="/" class="btn btn-primary">Home</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/summary" class="btn btn-primary">Summary</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/skills" class="btn btn-primary">Skills</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/education" class="btn btn-primary">Education</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/work" class="btn btn-primary">Work</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/person" class="btn btn-primary">Person</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/bio" class="btn btn-primary">Bio</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/program" class="btn btn-primary">Program</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/web" class="btn btn-primary">Web</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/js" class="btn btn-primary">JavaScript</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/car" class="btn btn-primary">Car</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/mac" class="btn btn-primary">Mac</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/facebook" class="btn btn-primary">Facebook</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/bootstrap" class="btn btn-primary">Bootstrap</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/task21" class="btn btn-primary">Task21</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/task22" class="btn btn-primary">Task22</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/task31" class="btn btn-primary">task31</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/shophome" class="btn btn-primary">Shop Home</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/shoporder" class="btn btn-primary">Shop Order</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/shopcart" class="btn btn-primary">Shop Cart</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/shopprofile" class="btn btn-primary">Shop Profile</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/shopreview" class="btn btn-primary">Shop Review</a>
+                </div>
+                <div class="nav-item mb-2">
+                    <a href="/shopcatalog" class="btn btn-primary">Shop Catalog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {{!--
 Цей код містить лише те, що буде виводитись в
