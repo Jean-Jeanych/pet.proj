@@ -110,6 +110,15 @@
                 </div>
                 {{/with}}
             </div>
+            <div class="col-8">
+                <div class="row g-2">
+                    {{#each goodsList}}
+                    <div class="col-6">
+                        {{> catalogItem}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
         </div>
     </section>
 
