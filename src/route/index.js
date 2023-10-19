@@ -1165,6 +1165,17 @@ router.get('/bootstrap', function (req, res) {
 
 // ================================================================
 
+router.get('/bootstrapcss', function (req, res) {
+  res.render('bootstrapcss', {
+    layout: 'bootstrap',
+    page: {
+      title: 'Bootstrap CSS',
+    },
+  })
+})
+
+// ================================================================
+
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
 
